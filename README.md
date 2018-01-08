@@ -4,12 +4,13 @@
 
   1. Add project Lombok to your IDE (the class ``com.swissquant.assignment.numbersdistance.model.point.Point`` is using it).  
   For **Eclipse** amend ``eclipse.ini`` and add ``lombok.jar`` to ``ECLIPSE_HOME``.  
+  **Important changes in ``eclipse.ini``**
   ```
-  -javaagent:lombok.jar
-  -Xbootclasspath/a:lombok.jar
+   -javaagent:lombok.jar
+   -Xbootclasspath/a:lombok.jar
   ```  
   Sources could be found in ``/number-distance-spring-boot/prerequisite/eclipse``
-  **Important changes in ``eclipse.ini``**
+  
 
 
 ### Integration Test with POSTMAN
