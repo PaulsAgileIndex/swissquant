@@ -16,7 +16,7 @@
    Reference-style: 
    ![alt text][logo]
 
-   [logo]: https://github.com/PaulsAgileIndex/swissquant/blob/master/prerequisite/eclipse/eclipseHome.jpg "Logo Title Text 2"
+   [logo]: https://github.com/PaulsAgileIndex/swissquant/blob/master/prerequisite/eclipse/eclipseHome.png "Logo Title Text 2"
 
   
 
