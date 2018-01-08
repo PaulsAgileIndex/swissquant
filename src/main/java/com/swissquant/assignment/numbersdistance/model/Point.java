@@ -18,10 +18,21 @@ public class Point implements Comparable<Point> {
 	private int x;
 	private int y;
 	
+	public double getDist(){
+    	return x*x+y*y;
+    }
+	
 	@Override
 	public int compareTo(Point o) {
-		// TODO Auto-generated method stub
-		return 0;
+		int c = Double.compare(getDist(), o.getDist());
+		if(c == 0){
+			c = Double.compare(x, o.x);
+			if(c == 0){
+				c = Double.compare(y, o.y);
+			}
+		}
+		
+		return c;
 	}	
 
 }
