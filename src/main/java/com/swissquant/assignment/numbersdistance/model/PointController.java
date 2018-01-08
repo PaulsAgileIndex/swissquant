@@ -21,20 +21,20 @@ public class PointController {
 	private PointService pointService;
 	
 	@RequestMapping(method = RequestMethod.POST, path = "/points/findClosestPointsTo")
-	public List<Point> findClosestPointsTo(@RequestBody Point point, @PathParam("resultSetSize") int resultSetSize, @PathParam("algoName") String algoName) {		
-		List<Point> resultList = pointService.findClosestPointsTo(point, resultSetSize, algoName);	
+	public List<Point> findClosestPointsTo(@RequestBody Point givenPoint, @PathParam("resultSetSize") int resultSetSize, @PathParam("algoName") String algoName) {		
+		List<Point> resultList = pointService.findClosestPointsTo(givenPoint, resultSetSize, algoName);	
 		StringBuilder sb = new StringBuilder();
 		resultList.forEach(p -> sb.append("\n" + p));
-		LOG.info(MessageFormat.format("Finding closest point to {0} resultSetSize: {1} \nResult list: {2}", point, resultSetSize, sb.toString()));
+		LOG.info(MessageFormat.format("Finding closest point to {0} resultSetSize: {1} \nResult list: {2}", givenPoint, resultSetSize, sb.toString()));
 		return resultList;
 	}
 		
 	@RequestMapping(method = RequestMethod.POST, path = "/points/findFurthestPointsTo")
-	public List<Point> findFurthestPointsTo(@RequestBody Point point, @PathParam("resultSetSize") int resultSetSize, @PathParam("algoName") String algoName) {		
-		List<Point> resultList = pointService.findFurthestPointsTo(point, resultSetSize, algoName);
+	public List<Point> findFurthestPointsTo(@RequestBody Point givenPoint, @PathParam("resultSetSize") int resultSetSize, @PathParam("algoName") String algoName) {		
+		List<Point> resultList = pointService.findFurthestPointsTo(givenPoint, resultSetSize, algoName);
 		StringBuilder sb = new StringBuilder();
 		resultList.forEach(p -> sb.append("\n" + p));
-		LOG.info(MessageFormat.format("Finding furthest point to {0} resultSetSize: {1} \nResult list: {2}", point, resultSetSize, sb.toString()));
+		LOG.info(MessageFormat.format("Finding furthest point to {0} resultSetSize: {1} \nResult list: {2}", givenPoint, resultSetSize, sb.toString()));
 		return resultList;
 	}
 

@@ -1,11 +1,14 @@
-## SwissQuant Assigment
+## SwissQuant Assignment
 
 ### Prerequisite
 
-  1. Add project Lombok to your IDE (the class ``com.swissquant.assignment.numbersdistance.model.point.Point`` is using it).  
-  For **Eclipse** amend ``eclipse.ini`` and add ``lombok.jar`` to ``ECLIPSE_HOME``.
-
-  [https://projectlombok.org/] (https://projectlombok.org/) 
+  1. Add project Lombok to your IDE [(https://projectlombok.org/] (https://projectlombok.org/) - 
+  the class ``com.swissquant.assignment.numbersdistance.model.point.Point`` is using it).  
+  **ADVANTAGE:**  
+  One does not have write ``getter/setter/hashCode/equals`` methods anymore.   
+  For **Eclipse**:  
+  Amend ``eclipse.ini`` and add ``lombok.jar`` to ``ECLIPSE_HOME`` (same 
+  place where ``eclipse.ini`` could be found).
   
   **Important changes in ``eclipse.ini``**
   ```
@@ -13,21 +16,49 @@
    -Xbootclasspath/a:lombok.jar
   ```  
 
-   Reference-style: 
-   ![alt text][logo]
+  Sources also could be found in ``${project.basedir}/prerequisite/eclipse``
 
-   [logo]: https://github.com/PaulsAgileIndex/swissquant/blob/master/prerequisite/eclipse/eclipseHome.png "Logo Title Text 2"
-
+  1. For easy integration testing use POSTMAN [https://www.getpostman.com/](https://www.getpostman.com/)
   
 
-  Sources could be found in ``/number-distance-spring-boot/prerequisite/eclipse``
-  
+### Run the Application from Eclipse
+
+  1. Navigate to ``com.swissquant.assignment.numbersdistance.SwissQuantApp``
+  2. Context menu: **``Run As``** -> **``Java Application``**
+
+
+### Run the Application from CLI
+
+  1. Navigate to ${project.basedir}
+  2. Execute **``mvn spring-boot:run``**
+
+
+### Unit Test
+  1. Invoked automatically during ``mvn clean install`` execution.
 
 
 ### Integration Test with POSTMAN
 
- 1. Run com.swissquant.assignment.numbersdistance.SwissQuantApp (SpringBoot Application)
- 2. Import /number-distance-spring-boot/postman/NumberDistance.postman_collection.json to Postman 
- 3. Execute findFurthestPointsTo or findClosestPointsTo request
+ 1. Run the Application (SpringBoot)
+ 2. Import to Postman ``${project.basedir}/postman/NumberDistance.postman_collection.json`` 
+ 3. Execute request ``findFurthestPointsTo`` or ``findClosestPointsTo`` 
  4. Check results
+
+ **IMPORTANT**
+ 1. ResultSet size could be changed in request parameter e.g ``resultSetSize=20``
+ 2. Algorithm could be changed with e.g. ``algoName=bruteforce`` (brutefoce is currently 
+ the only available algorithm)
+ 2. The given point (reference point for which the search in performed) could be changed in request body 
+ 
+ ```JSON
+  {
+    "x": 1000,
+    "y": 25
+  }
+ ```
+
+### Room for Improvements
+
+ 1. Implement and add some algorithms to the Factory ``com.swissquant.assignment.numbersdistance.algorith.AlgoFactory``
+
     
