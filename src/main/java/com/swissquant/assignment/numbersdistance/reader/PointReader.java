@@ -1,12 +1,17 @@
-package com.swissquant.assignment.numbersdistance.model.point;
+package com.swissquant.assignment.numbersdistance.reader;
 
 import java.io.InputStream;
 import java.nio.ByteBuffer;
+import java.text.MessageFormat;
 import java.util.concurrent.ConcurrentHashMap;
 
+import javax.annotation.PostConstruct;
 import javax.inject.Named;
 
 import org.apache.commons.io.IOUtils;
+import org.apache.log4j.Logger;
+
+import com.swissquant.assignment.numbersdistance.model.Point;
 
 /**
  * Read Points from file and provide reduced map as input data. 
@@ -17,6 +22,8 @@ import org.apache.commons.io.IOUtils;
 @Named
 public class PointReader {
 
+	private Logger LOG = Logger.getLogger(PointReader.class);
+	
 	private static final String FILE_NAME = "points";
 	private static final int DECODE_OFFSET = 4;
 	private Point tempPoint;
@@ -24,6 +31,18 @@ public class PointReader {
 	private short y;	
 	private ConcurrentHashMap<Integer, Point> pointsCache;
 
+	/**
+	 * Reading given (static) file "points" at start-up time.
+	 * 
+	 * NOTE:
+	 * The given assignment does not require reading different input files.
+	 * Could be changed in later iterations.
+	 */
+	@PostConstruct
+	public void init() {
+		getCachedPointsMap();
+	}
+	
 	/**
 	 * Read data from file only once during runtime.
 	 * 
@@ -48,15 +67,17 @@ public class PointReader {
 		ClassLoader cl = Thread.currentThread().getContextClassLoader();	
 		try(InputStream in = cl.getResourceAsStream(FILE_NAME)){
 			byte[] bytes = IOUtils.toByteArray(in);
-
+			long start = System.currentTimeMillis();
 			for (int i = 0; i < bytes.length; i = i + DECODE_OFFSET) {
 				/* Decode 16 bit to short coordinate */
 				x = ByteBuffer.wrap(new byte[]{bytes[i], bytes[i+1]}).getShort();
 				y = ByteBuffer.wrap(new byte[]{bytes[i+2], bytes[i+3]}).getShort();
 				
 				/* Create Point object and cache it */
-				cacheReduce(x, y);				
+				cacheReduce(x, y);					
 			}
+			long duration = (System.currentTimeMillis() - start) / 1000;
+			LOG.info(MessageFormat.format("Duration {0} sec. for computing cached input map of {1} elements", duration, pointsCache.size()));
 		}
 		catch (Exception e) {
 			e.printStackTrace();

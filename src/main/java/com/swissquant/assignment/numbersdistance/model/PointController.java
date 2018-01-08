@@ -1,4 +1,4 @@
-package com.swissquant.assignment.numbersdistance.model.point;
+package com.swissquant.assignment.numbersdistance.model;
 
 import java.util.List;
 

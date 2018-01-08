@@ -1,4 +1,4 @@
-package com.swissquant.assignment.numbersdistance.model.point;
+package com.swissquant.assignment.numbersdistance.model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,6 +7,8 @@ import java.util.concurrent.ConcurrentHashMap;
 import javax.inject.Inject;
 
 import org.springframework.stereotype.Service;
+
+import com.swissquant.assignment.numbersdistance.reader.PointReader;
 
 @Service
 public class PointService {
