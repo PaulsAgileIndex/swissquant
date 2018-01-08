@@ -2,11 +2,6 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<!-- <parent> -->
-	<!-- <groupId>com.avoodoo</groupId> -->
-	<!-- <artifactId>avoodoo</artifactId> -->
-	<!-- <version>1.0</version> -->
-	<!-- </parent> -->
 	<groupId>com.swissquant</groupId>
 	<artifactId>number-distance-spring-boot</artifactId>
 	<version>1.0-SNAPSHOT</version>
@@ -17,27 +12,7 @@
 		<failOnMissingWebXml>false</failOnMissingWebXml>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<dist.repo.id>libs-release-local</dist.repo.id>
-		<dist.repo.name>libs-release-local</dist.repo.name>
-		<dist.repo.url>http://artifactory.avoodoo.com:9001/artifactory/libs-release-local</dist.repo.url>
-
-		<dist.snaprepo.id>libs-snapshot-local</dist.snaprepo.id>
-		<dist.snaprepo.name>libs-snapshot-local</dist.snaprepo.name>
-		<dist.snaprepo.url>http://artifactory.avoodoo.com:9001/artifactory/libs-snapshot-local</dist.snaprepo.url>
 	</properties>
-
-<!-- 	<distributionManagement> -->
-<!-- 		<repository> -->
-<!-- 			<id>${dist.repo.id}</id> -->
-<!-- 			<name>${dist.repo.name}</name> -->
-<!-- 			<url>${dist.repo.url}</url> -->
-<!-- 		</repository> -->
-<!-- 		<snapshotRepository> -->
-<!-- 			<id>${dist.snaprepo.id}</id> -->
-<!-- 			<name>${dist.snaprepo.name}</name> -->
-<!-- 			<url>${dist.snaprepo.url}</url> -->
-<!-- 		</snapshotRepository> -->
-<!-- 	</distributionManagement> -->
 
 	<dependencyManagement>
 		<dependencies>
@@ -51,6 +26,11 @@
 				<groupId>log4j</groupId>
 				<artifactId>log4j</artifactId>
 				<version>1.2.17</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-io</groupId>
+				<artifactId>commons-io</artifactId>
+				<version>2.6</version>
 			</dependency>
 			<dependency>
 				<!-- Import dependency management from Spring Boot -->
@@ -71,6 +51,10 @@
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.glassfish.jersey.core</groupId>
@@ -121,11 +105,6 @@
 					<groupId>org.wildfly.plugins</groupId>
 					<artifactId>wildfly-maven-plugin</artifactId>
 					<version>1.0.2.Final</version>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-checkstyle-plugin</artifactId>
-					<version>2.17</version>
 				</plugin>
 				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
