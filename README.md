@@ -12,6 +12,14 @@
    -javaagent:lombok.jar
    -Xbootclasspath/a:lombok.jar
   ```  
+
+   Reference-style: 
+   ![alt text][logo]
+
+   [logo]: https://github.com/PaulsAgileIndex/swissquant/blob/master/prerequisite/eclipse/eclipseHome.jpg "Logo Title Text 2"
+
+  
+
   Sources could be found in ``/number-distance-spring-boot/prerequisite/eclipse``
   
 
