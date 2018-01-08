@@ -3,7 +3,10 @@
 ### Prerequisite
 
   1. Add project Lombok to your IDE (the class ``com.swissquant.assignment.numbersdistance.model.point.Point`` is using it).  
-  For **Eclipse** amend ``eclipse.ini`` and add ``lombok.jar`` to ``ECLIPSE_HOME``.  
+  For **Eclipse** amend ``eclipse.ini`` and add ``lombok.jar`` to ``ECLIPSE_HOME``.
+
+  [https://projectlombok.org/] (https://projectlombok.org/) 
+  
   **Important changes in ``eclipse.ini``**
   ```
    -javaagent:lombok.jar
