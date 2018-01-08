@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class PointController {
 	
-	Logger LOG = Logger.getLogger(PointController.class);
+	private Logger LOG = Logger.getLogger(PointController.class);
 	
 	@Inject
 	private PointService pointService;
