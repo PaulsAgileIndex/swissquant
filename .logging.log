@@ -1,6 +1,0 @@
-2018-01-08 16:35:31 INFO  PointController:29 - resultSetSize: 20
-2018-01-08 16:39:25 INFO  PointController:29 - finding furthest point to Point: Point(x=0, y=0) resultSetSize: 20
-2018-01-08 16:42:38 INFO  PointController:29 - finding furthest point to Point: Point(x=0, y=0) resultSetSize: 20
-2018-01-08 16:42:43 INFO  PointController:23 - finding closest point to Point: Point(x=0, y=0) resultSetSize: 10
-2018-01-08 16:44:12 INFO  PointController:24 - finding closest point to Point: Point(x=-200, y=300) resultSetSize: 10
-2018-01-08 16:44:22 INFO  PointController:30 - finding furthest point to Point: Point(x=1000, y=25) resultSetSize: 20
