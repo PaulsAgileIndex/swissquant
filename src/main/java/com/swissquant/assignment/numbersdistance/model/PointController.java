@@ -1,5 +1,6 @@
 package com.swissquant.assignment.numbersdistance.model;
 
+import java.text.MessageFormat;
 import java.util.List;
 
 import javax.inject.Inject;
@@ -20,15 +21,21 @@ public class PointController {
 	private PointService pointService;
 	
 	@RequestMapping(method = RequestMethod.POST, path = "/points/findClosestPointsTo")
-	public List<Point> findClosestPointsTo(@RequestBody Point point, @PathParam("resultSetSize") int resultSetSize) {
-		LOG.info("finding closest point to Point: " + point + " resultSetSize: " + resultSetSize);
-		return pointService.findClosestPointsTo(point, resultSetSize);
+	public List<Point> findClosestPointsTo(@RequestBody Point point, @PathParam("resultSetSize") int resultSetSize, @PathParam("algoName") String algoName) {		
+		List<Point> resultList = pointService.findClosestPointsTo(point, resultSetSize, algoName);	
+		StringBuilder sb = new StringBuilder();
+		resultList.forEach(p -> sb.append("\n" + p));
+		LOG.info(MessageFormat.format("Finding closest point to {0} resultSetSize: {1} \nResult list: {2}", point, resultSetSize, sb.toString()));
+		return resultList;
 	}
 		
 	@RequestMapping(method = RequestMethod.POST, path = "/points/findFurthestPointsTo")
-	public List<Point> findFurthestPointsTo(@RequestBody Point point, @PathParam("resultSetSize") int resultSetSize) {
-		LOG.info("finding furthest point to Point: " + point + " resultSetSize: " + resultSetSize);
-		return pointService.findFurthestPointsTo(point, resultSetSize);
+	public List<Point> findFurthestPointsTo(@RequestBody Point point, @PathParam("resultSetSize") int resultSetSize, @PathParam("algoName") String algoName) {		
+		List<Point> resultList = pointService.findFurthestPointsTo(point, resultSetSize, algoName);
+		StringBuilder sb = new StringBuilder();
+		resultList.forEach(p -> sb.append("\n" + p));
+		LOG.info(MessageFormat.format("Finding furthest point to {0} resultSetSize: {1} \nResult list: {2}", point, resultSetSize, sb.toString()));
+		return resultList;
 	}
 
 }

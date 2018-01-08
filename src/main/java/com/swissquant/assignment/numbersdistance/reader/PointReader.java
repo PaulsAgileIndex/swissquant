@@ -77,7 +77,7 @@ public class PointReader {
 				cacheReduce(x, y);					
 			}
 			long duration = (System.currentTimeMillis() - start) / 1000;
-			LOG.info(MessageFormat.format("Duration {0} sec. for computing cached input map of {1} elements", duration, pointsCache.size()));
+			LOG.info(MessageFormat.format("Duration {0} sec. for computing cached input map of {1} Point elements", duration, pointsCache.size()));
 		}
 		catch (Exception e) {
 			e.printStackTrace();

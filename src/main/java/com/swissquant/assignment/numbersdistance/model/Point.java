@@ -13,9 +13,15 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Point {
+public class Point implements Comparable<Point> {
 	
 	private int x;
-	private int y;	
+	private int y;
+	
+	@Override
+	public int compareTo(Point o) {
+		// TODO Auto-generated method stub
+		return 0;
+	}	
 
 }

@@ -21,7 +21,7 @@
 					"raw": "{\n    \"x\": 1000,\n    \"y\": 25\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8080/points/findFurthestPointsTo?resultSetSize=20",
+					"raw": "http://localhost:8080/points/findFurthestPointsTo?resultSetSize=20&algoName=bruteforce",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -35,6 +35,11 @@
 						{
 							"key": "resultSetSize",
 							"value": "20",
+							"equals": true
+						},
+						{
+							"key": "algoName",
+							"value": "bruteforce",
 							"equals": true
 						}
 					]
