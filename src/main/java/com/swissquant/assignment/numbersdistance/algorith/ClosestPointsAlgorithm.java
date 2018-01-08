@@ -5,7 +5,7 @@ import java.util.Map;
 
 import com.swissquant.assignment.numbersdistance.model.Point;
 
-public interface ClosestPoints {
+public interface ClosestPointsAlgorithm {
 	
 	public abstract List<Point> getClosestPoints(Map<Integer, Point> pointUnivers, Point givenPoint, int resultSetSize);
 

@@ -7,8 +7,8 @@ import javax.inject.Inject;
 import org.springframework.stereotype.Service;
 
 import com.swissquant.assignment.numbersdistance.algorith.AlgoFactory;
-import com.swissquant.assignment.numbersdistance.algorith.ClosestPoints;
-import com.swissquant.assignment.numbersdistance.algorith.FurthestPoints;
+import com.swissquant.assignment.numbersdistance.algorith.ClosestPointsAlgorithm;
+import com.swissquant.assignment.numbersdistance.algorith.FurthestPointsAlgorithm;
 import com.swissquant.assignment.numbersdistance.reader.PointReader;
 
 @Service
@@ -26,7 +26,7 @@ public class PointService {
 	 * @return List of closest Points 
 	 */
 	public List<Point> findClosestPointsTo(Point givenPoint, int resultSetSize, String algoName) {	
-		ClosestPoints algo = AlgoFactory.getClosestPointsAlgorithm(algoName);
+		ClosestPointsAlgorithm algo = AlgoFactory.getClosestPointsAlgorithm(algoName);
 		return algo.getClosestPoints(reader.getCachedPointsMap(), givenPoint, resultSetSize);
 	}
 	
@@ -38,7 +38,7 @@ public class PointService {
 	 * @return List of furthest Points 
 	 */
 	public List<Point> findFurthestPointsTo(Point givenPoint, int resultSetSize, String algoName) {
-		FurthestPoints algo = AlgoFactory.getFurthestPointsAlgorithm(algoName);
+		FurthestPointsAlgorithm algo = AlgoFactory.getFurthestPointsAlgorithm(algoName);
 		return algo.getFurthestPoints(reader.getCachedPointsMap(), givenPoint, resultSetSize);
 	}
 

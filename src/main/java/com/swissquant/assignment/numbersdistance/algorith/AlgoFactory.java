@@ -6,10 +6,10 @@ import com.swissquant.assignment.numbersdistance.algorith.bruteforce.FurthestPoi
 public class AlgoFactory {
 	
 	private static final String BRUTE_FORCE = "bruteforce";
-	private static ClosestPoints closestAlgo; 
-	private static FurthestPoints furthestAlgo;
+	private static ClosestPointsAlgorithm closestAlgo; 
+	private static FurthestPointsAlgorithm furthestAlgo;
 	
-	public static ClosestPoints getClosestPointsAlgorithm(String algoName) {
+	public static ClosestPointsAlgorithm getClosestPointsAlgorithm(String algoName) {
 		switch (algoName) {
 		case BRUTE_FORCE:
 			closestAlgo = new ClosestPointsBruteForce();
@@ -21,7 +21,7 @@ public class AlgoFactory {
 		return closestAlgo;
 	}
 	
-	public static FurthestPoints getFurthestPointsAlgorithm(String algoName) {
+	public static FurthestPointsAlgorithm getFurthestPointsAlgorithm(String algoName) {
 		switch (algoName) {
 		case BRUTE_FORCE:
 			furthestAlgo = new FurthestPointsBruteForce();

@@ -6,10 +6,10 @@ import java.util.Map;
 import java.util.PriorityQueue;
 import java.util.stream.Collectors;
 
-import com.swissquant.assignment.numbersdistance.algorith.ClosestPoints;
+import com.swissquant.assignment.numbersdistance.algorith.ClosestPointsAlgorithm;
 import com.swissquant.assignment.numbersdistance.model.Point;
 
-public class ClosestPointsBruteForce implements ClosestPoints {
+public class ClosestPointsBruteForce implements ClosestPointsAlgorithm {
 
 	@Override
 	public List<Point> getClosestPoints(Map<Integer, Point> pointUnivers, Point givenPoint, int resultSetSize) {		

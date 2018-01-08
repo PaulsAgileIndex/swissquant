@@ -5,10 +5,10 @@ import java.util.Map;
 import java.util.PriorityQueue;
 import java.util.stream.Collectors;
 
-import com.swissquant.assignment.numbersdistance.algorith.FurthestPoints;
+import com.swissquant.assignment.numbersdistance.algorith.FurthestPointsAlgorithm;
 import com.swissquant.assignment.numbersdistance.model.Point;
 
-public class FurthestPointsBruteForce implements FurthestPoints {
+public class FurthestPointsBruteForce implements FurthestPointsAlgorithm {
 
 	@Override
 	public List<Point> getFurthestPoints(Map<Integer, Point> pointUnivers, Point givenPoint, int resultSetSize) {

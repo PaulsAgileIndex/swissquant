@@ -5,7 +5,7 @@ import java.util.Map;
 
 import com.swissquant.assignment.numbersdistance.model.Point;
 
-public interface FurthestPoints {
+public interface FurthestPointsAlgorithm {
 
 	public abstract List<Point> getFurthestPoints(Map<Integer, Point> pointUnivers, Point givenPoint, int resultSetSize);
 	
