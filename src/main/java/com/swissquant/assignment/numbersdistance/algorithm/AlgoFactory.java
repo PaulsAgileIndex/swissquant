@@ -4,7 +4,7 @@ import com.swissquant.assignment.numbersdistance.algorithm.bruteforce.ClosestPoi
 import com.swissquant.assignment.numbersdistance.algorithm.bruteforce.FurthestPointsBruteForce;
 
 /**
- * This factory decides based on the provided algoName which algorithm is used for comuting the closest/furthest points.
+ * This factory decides based on the provided algoName which algorithm is used for computing the closest/furthest points.
  * 
  * @author Frank Sprich
  *

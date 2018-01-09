@@ -19,17 +19,17 @@ public class FurthestPointsBruteForce implements FurthestPointsAlgorithm {
 	@Override
 	public List<Point> getFurthestPoints(Map<Integer, Point> pointUnivers, Point givenPoint, int resultSetSize) {
 		List<Point> universList = pointUnivers.values().stream().collect(Collectors.toList());
-		
+
 		final PriorityQueue<Point> resultFurthest = new PriorityQueue<Point>(resultSetSize);
 
-	    for (int i = 0; i < universList.size(); i++) {
-	        if (resultFurthest.size() < resultSetSize) {
-	        	resultFurthest.add(universList.get(i));
-	        } else if (universList.get(i).getDist() > resultFurthest.peek().getDist()) {
-	            resultFurthest.remove();
-	            resultFurthest.add(universList.get(i));
-	        }
-	    }
+		for (int i = 0; i < universList.size(); i++) {
+			if (resultFurthest.size() < resultSetSize) {
+				resultFurthest.add(universList.get(i));
+			} else if (universList.get(i).getDist() > resultFurthest.peek().getDist()) {
+				resultFurthest.remove();
+				resultFurthest.add(universList.get(i));
+			}
+		}
 
 		return resultFurthest.stream().collect(Collectors.toList());
 	}
