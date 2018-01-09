@@ -24,8 +24,9 @@
 
 ### Run the Application from Eclipse
 
-  1. Navigate to ``com.swissquant.assignment.numbersdistance.SwissQuantApp``
-  2. Context menu: **``Run As``** -> **``Java Application``**
+  1. Add Lombok to Eclipse as described above
+  2. Navigate to ``com.swissquant.assignment.numbersdistance.SwissQuantApp``
+  3. Context menu: **``Run As``** -> **``Java Application``**
 
 
 ### Run the Application from CLI
