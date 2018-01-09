@@ -26,7 +26,7 @@ public class ClosestPointsBruteForce implements ClosestPointsAlgorithm {
 		for (int i = 0; i < universList.size(); i++) {
 			if (resultClosest.size() < resultSetSize) {
 				resultClosest.add(universList.get(i));
-			} else if (universList.get(i).distance(givenPoint) < resultClosest.peek().distance(givenPoint)) {
+			} else if (universList.get(i).getDist(givenPoint) < resultClosest.peek().getDist(givenPoint)) {
 				resultClosest.remove();
 				resultClosest.add(universList.get(i));
 			}

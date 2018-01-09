@@ -25,7 +25,7 @@ public class FurthestPointsBruteForce implements FurthestPointsAlgorithm {
 		for (int i = 0; i < universList.size(); i++) {
 			if (resultFurthest.size() < resultSetSize) {
 				resultFurthest.add(universList.get(i));
-			} else if (universList.get(i).distance(givenPoint) > resultFurthest.peek().distance(givenPoint)) {
+			} else if (universList.get(i).getDist(givenPoint) > resultFurthest.peek().getDist(givenPoint)) {
 				resultFurthest.remove();
 				resultFurthest.add(universList.get(i));
 			}
