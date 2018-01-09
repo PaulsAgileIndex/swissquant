@@ -51,7 +51,7 @@ public class PointControllerRs {
 	/**
 	 * REST method to handle request for furthest points.
 	 * 
-	 * @param givenPoint the point for which the closests points from the pointUnivers should be found
+	 * @param givenPoint the point for which the furthest points from the pointUnivers should be found
 	 * @param resultSetSize the size of the result set
 	 * @param algoName name of the algorithm
 	 * @return List of Points
