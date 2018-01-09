@@ -58,7 +58,7 @@
  ```
 
 
-### Room for Improvements
+### Room for Improvement
 
  1. Implement and add some algorithms to the Factory ``com.swissquant.assignment.numbersdistance.algorith.AlgoFactory``
  2. The given assignment does not require reading different input files. Could be changed in later iterations 
