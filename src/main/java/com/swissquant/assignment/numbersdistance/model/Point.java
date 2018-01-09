@@ -37,6 +37,22 @@ public class Point implements Comparable<Point> {
 		return x * x + y * y;
 	}
 
+    /**
+     * Returns the distance from this <code>Point2D</code> to a
+     * specified <code>Point2D</code>.
+     *
+     * @param pt the specified point to be measured
+     *           against this <code>Point2D</code>
+     * @return the distance between this <code>Point2D</code> and
+     * the specified <code>Point2D</code>.
+     * @since 1.2
+     */
+    public double distance(Point pt) {
+        double px = pt.getX() - this.getX();
+        double py = pt.getY() - this.getY();
+        return Math.sqrt(px * px + py * py);
+    }
+	
 	@Override
 	public int compareTo(Point o) {
 		int c = Double.compare(getDist(), o.getDist());
