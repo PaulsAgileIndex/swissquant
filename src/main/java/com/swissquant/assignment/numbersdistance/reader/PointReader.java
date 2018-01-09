@@ -24,13 +24,29 @@ public class PointReader {
 
 	private Logger LOG = Logger.getLogger(PointReader.class);
 	
-	private static final String FILE_NAME = "points";
+	private String fileName = "points";
 	private static final int DECODE_OFFSET = 4;
 	private Point tempPoint;
 	private short x;
 	private short y;	
 	private ConcurrentHashMap<Integer, Point> pointsCache;
 
+	/**
+	 * Default constructor.
+	 */
+	public PointReader() {
+
+	}
+	
+	/**
+	 * Constructor: File name could be set from outside.
+	 * 
+	 * @param fileName from outside
+	 */
+	public PointReader(String fileName) {
+		this.fileName = fileName;
+	}
+	
 	/**
 	 * Reading given (static) file "points" at application start time.
 	 * 
@@ -65,7 +81,7 @@ public class PointReader {
 	private void readFile() {	
 		/* Read "points" file as resource */
 		ClassLoader cl = Thread.currentThread().getContextClassLoader();	
-		try(InputStream in = cl.getResourceAsStream(FILE_NAME)){
+		try(InputStream in = cl.getResourceAsStream(fileName)){
 			byte[] bytes = IOUtils.toByteArray(in);
 			long start = System.currentTimeMillis();
 			for (int i = 0; i < bytes.length; i = i + DECODE_OFFSET) {

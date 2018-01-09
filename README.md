@@ -2,10 +2,10 @@
 
 ### Prerequisite
 
-  1. Add project Lombok to your IDE [https://projectlombok.org/](https://projectlombok.org/) - 
+  1. Add project Lombok to your IDE ([https://projectlombok.org/](https://projectlombok.org/) - 
   the class ``com.swissquant.assignment.numbersdistance.model.Point`` is using it).  
   **ADVANTAGE:**  
-  One does not have write ``getter/setter/hashCode/equals`` methods anymore.   
+  One does not have to write ``getter/setter/hashCode/equals`` methods anymore.   
   For **Eclipse**:  
   Amend ``eclipse.ini`` and add ``lombok.jar`` to ``ECLIPSE_HOME`` (same 
   place where ``eclipse.ini`` could be found).
@@ -36,7 +36,8 @@
 
 
 ### Unit Test
-  1. Invoked automatically during ``mvn clean install`` execution.
+  1. Invoked automatically during **``mvn clean install``** execution.
+  2. Due to the more integration test like character of some unit tests one could also dismiss test execution for faster build cycles with **``mvn clean install-DskipTests``**
 
 
 ### Integration Test with POSTMAN
