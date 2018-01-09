@@ -2,7 +2,7 @@
 
 ### Prerequisite
 
-  1. Add project Lombok to your IDE [https://projectlombok.org/] (https://projectlombok.org/) - 
+  1. Add project Lombok to your IDE [https://projectlombok.org/](https://projectlombok.org/) - 
   the class ``com.swissquant.assignment.numbersdistance.model.point.Point`` is using it).  
   **ADVANTAGE:**  
   One does not have write ``getter/setter/hashCode/equals`` methods anymore.   
