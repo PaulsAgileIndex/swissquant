@@ -8,6 +8,12 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * Depicts a point in a 2D scale.
+ * 
+ * @author Frank Sprich
+ *
+ */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -15,9 +21,17 @@ import lombok.NoArgsConstructor;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Point implements Comparable<Point> {
 	
+	/** Coordinate on the x-axis */
 	private int x;
+	
+	/** Coordinate on the y-axis */
 	private int y;
 	
+	/**
+	 * You can avoid computing Math.sqrt(dx*dx + dy*dy);. 
+	 * dx*dx + dy*dy is enough to compare the distances.
+	 * @return
+	 */
 	public double getDist(){
     	return x*x+y*y;
     }

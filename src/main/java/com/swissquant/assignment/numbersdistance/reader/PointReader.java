@@ -32,7 +32,7 @@ public class PointReader {
 	private ConcurrentHashMap<Integer, Point> pointsCache;
 
 	/**
-	 * Reading given (static) file "points" at start-up time.
+	 * Reading given (static) file "points" at application start time.
 	 * 
 	 * NOTE:
 	 * The given assignment does not require reading different input files.

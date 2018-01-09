@@ -57,8 +57,23 @@
   }
  ```
 
+
 ### Room for Improvements
 
  1. Implement and add some algorithms to the Factory ``com.swissquant.assignment.numbersdistance.algorith.AlgoFactory``
+ 2. The given assignment does not require reading different input files. Could be changed in later iterations 
+ => reading given (static) file "points" at application start time.
+
+
+### Sources
+
+**Input for decoding the binary file**
+   1. [https://stackoverflow.com/questions/7157901/how-to-read-signed-int-from-bytes-in-java](https://stackoverflow.com/questions/7157901/how-to-read-signed-int-from-bytes-in-java)   
+   2. [https://stackoverflow.com/questions/7619058/convert-a-byte-array-to-integer-in-java-and-vice-versa](https://stackoverflow.com/questions/7619058/convert-a-byte-array-to-integer-in-java-and-vice-versa) 
+
+
+**Input for implementing the algorithm**
+   1. [http://www.zrzahid.com/k-closest-points/](http://www.zrzahid.com/k-closest-points/)   
+   2. [https://codereview.stackexchange.com/questions/9943/finding-points-with-the-shortest-distance](https://codereview.stackexchange.com/questions/9943/finding-points-with-the-shortest-distance)
 
     

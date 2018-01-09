@@ -6,11 +6,17 @@ import javax.inject.Inject;
 
 import org.springframework.stereotype.Service;
 
-import com.swissquant.assignment.numbersdistance.algorith.AlgoFactory;
-import com.swissquant.assignment.numbersdistance.algorith.ClosestPointsAlgorithm;
-import com.swissquant.assignment.numbersdistance.algorith.FurthestPointsAlgorithm;
+import com.swissquant.assignment.numbersdistance.algorithm.AlgoFactory;
+import com.swissquant.assignment.numbersdistance.algorithm.ClosestPointsAlgorithm;
+import com.swissquant.assignment.numbersdistance.algorithm.FurthestPointsAlgorithm;
 import com.swissquant.assignment.numbersdistance.reader.PointReader;
 
+/**
+ * Service class to finding the closest/furthest points to a given point. 
+ * 
+ * @author Frank Sprich
+ *
+ */
 @Service
 public class PointService {
 	
