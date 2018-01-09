@@ -12,6 +12,7 @@
   
   **Important changes in ``eclipse.ini``**
   ```
+   -vmargs
    -javaagent:lombok.jar
    -Xbootclasspath/a:lombok.jar
   ```  
