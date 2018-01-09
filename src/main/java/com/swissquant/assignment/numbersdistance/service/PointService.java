@@ -1,4 +1,4 @@
-package com.swissquant.assignment.numbersdistance.model;
+package com.swissquant.assignment.numbersdistance.service;
 
 import java.util.List;
 
@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import com.swissquant.assignment.numbersdistance.algorithm.AlgoFactory;
 import com.swissquant.assignment.numbersdistance.algorithm.ClosestPointsAlgorithm;
 import com.swissquant.assignment.numbersdistance.algorithm.FurthestPointsAlgorithm;
+import com.swissquant.assignment.numbersdistance.model.Point;
 import com.swissquant.assignment.numbersdistance.reader.PointReader;
 
 /**

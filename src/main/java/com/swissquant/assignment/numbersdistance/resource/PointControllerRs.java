@@ -1,4 +1,4 @@
-package com.swissquant.assignment.numbersdistance.model;
+package com.swissquant.assignment.numbersdistance.resource;
 
 import java.text.MessageFormat;
 import java.util.List;
@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.swissquant.assignment.numbersdistance.model.Point;
+import com.swissquant.assignment.numbersdistance.service.PointService;
+
 /**
  * Controller/Resource which handles requests from a REST client.
  * 
@@ -19,9 +22,9 @@ import org.springframework.web.bind.annotation.RestController;
  *
  */
 @RestController
-public class PointController {
+public class PointControllerRs {
 	
-	private Logger LOG = Logger.getLogger(PointController.class);
+	private Logger LOG = Logger.getLogger(PointControllerRs.class);
 	
 	@Inject
 	private PointService pointService;
