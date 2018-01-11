@@ -63,7 +63,7 @@
 					"raw": "{\n    \"x\": -200,\n    \"y\": 300\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8080/points/findClosestPointsTo?resultSetSize=10",
+					"raw": "http://localhost:8080/points/findClosestPointsTo?resultSetSize=10&algoName=bruteforce",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -77,6 +77,11 @@
 						{
 							"key": "resultSetSize",
 							"value": "10",
+							"equals": true
+						},
+						{
+							"key": "algoName",
+							"value": "bruteforce",
 							"equals": true
 						}
 					]
