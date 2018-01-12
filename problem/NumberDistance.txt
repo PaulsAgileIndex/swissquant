@@ -1,0 +1,37 @@
+
+
+Number Distance
+
+Problem:
+--------------------
+
+You're given a binary file called "points" containing 10 million points (x,y). Each point is encoded
+as two successive 16 bit signed integer values.
+
+Implement and ship us a Java program that computes, of all the points in the file
+
+ - The 10 closest points to (-200, 300)
+ - The 20 furthest points form (1000. 25)
+ 
+ Use a state of the art build tool like Ant, Maven or Gradle. Make sure that the package you ship
+ contains all necessary files and libraries. It should compile and run tests in the usual way of your
+ chosen build tool (i.e. "mvn clean install" or "gradle build").
+ 
+ 
+ Acceptance Criteria:
+ --------------------
+ 
+ - Find the correct solution of 10 closest and 20 furthest points.
+ - To evaluate how close two points are, use the ordinary/Euclidean distance.
+ - The computation of each result should take no longer than 10 seconds.
+ - The solution should be packaged such that a <Name of the Company> developer can easily understand
+   how to build it from source code and run it.
+   
+   
+ Acceptance Criteria:
+ -------------------- 
+ 
+ - To verfy that your are decoding the points correctly, the first 3 points in the file are: 
+   (-715, 22165), (761, -23591), (-194, 6015)
+ - Do a professional job in terms of implementation, validation and packaging
+ - Please do not distribute this challenge or solution to it
