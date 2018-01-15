@@ -76,9 +76,13 @@ public class PointControllerRs {
 	 */
 	@RequestMapping(method = RequestMethod.GET, path = "/points/createPointUniverseFile")
 	public Response createPointUniverseFile(@PathParam("pointsInUniverse") int pointsInUniverse, @PathParam("fileName") String fileName) {
+		long start = System.currentTimeMillis();
 		/* There are two coordinates for a point in the point universe */
 		pointService.createPointUniverse(pointsInUniverse * 2, fileName);
-		return Response.ok().build();
+		long duration = System.currentTimeMillis() - start;
+		String info = MessageFormat.format("The processing duration ot this call is {0}ms", duration);
+		LOG.info(info);
+		return Response.ok(info).build();
 	}
 
 }

@@ -100,35 +100,40 @@ public class PointService {
 		randomCoordinates.forEach(p -> {
 			tempCoordinatesList.add(encodeCoordinate(p));
 		});
+				
+		List<Byte> coordinatesAsByteList = new ArrayList<>();
 		
 		/* Add initial coordinates to point universe */
-		List<Byte> coordinatesAsByteList = new ArrayList<>();
 		for (int i = 0; i < initialPointCoordinates.length; i++) {
 			coordinatesAsByteList.add(initialPointCoordinates[i]);
 		}		
 		
 		/* Add random coordinates to point universe */
 		for(byte[] tempArray : tempCoordinatesList) {
+			/* A coordinate has two bytes in our situation (integer 16bit encoded -> byte[] of length 2) */
 			for (int i = 0; i < tempArray.length; i++) {
 				coordinatesAsByteList.add(tempArray[i]);
 			}
 		}
 
 		/* Convert form List<Byte> to Byte[] */
-		Byte[] tempPointUniverse = coordinatesAsByteList.toArray(new Byte[coordinatesAsByteList.size()]);		
-		
+		Byte[] tempPointUniverse = coordinatesAsByteList.toArray(new Byte[coordinatesAsByteList.size()]);	
 		/* Convert from Byte[] to byte[] */
-		byte[] pointUnivese = new byte[coordinatesAsByteList.size()];		
-		int j = 0;
-		for (Byte tempCoordinate : tempPointUniverse) {
-			pointUnivese[j++] = tempCoordinate.byteValue();
-		}
+		byte[] pointUnivese = ArrayUtils.toPrimitive(tempPointUniverse);
+		
+		
+//		/* Convert from Byte[] to byte[] */
+//		byte[] pointUnivese = new byte[coordinatesAsByteList.size()];		
+//		int j = 0;
+//		for (Byte tempCoordinate : tempPointUniverse) {
+//			pointUnivese[j++] = tempCoordinate.byteValue();
+//		}
 
 		return pointUnivese;
 	}	
 	
 	/**
-	 * 16 bit encoded integer value to byte[].
+	 * Encoded 16 bit integer value represendet by a two elements byte[] (2 * 8 bit).
 	 * 
 	 * @param coordinate
 	 * @return
