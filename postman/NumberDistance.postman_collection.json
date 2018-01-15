@@ -49,6 +49,48 @@
 			"response": []
 		},
 		{
+			"name": "createPointUniverseFile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"x\": 1000,\n    \"y\": 25\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/points/createPointUniverseFile?pointsInUniverse=10000000&fileName=problem/myPointsUniverse",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"points",
+						"createPointUniverseFile"
+					],
+					"query": [
+						{
+							"key": "pointsInUniverse",
+							"value": "10000000",
+							"equals": true
+						},
+						{
+							"key": "fileName",
+							"value": "problem/myPointsUniverse",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
 			"name": "findClosestPointsTo",
 			"request": {
 				"method": "POST",
