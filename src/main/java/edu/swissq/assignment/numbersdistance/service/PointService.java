@@ -128,7 +128,7 @@ public class PointService {
 	}	
 	
 	/**
-	 * 16 bit encoded integer value to byte[].
+	 * Encoded 16 bit integer value represendet by a two elements byte[] (2 * 8 bit).
 	 * 
 	 * @param coordinate
 	 * @return
