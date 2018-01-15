@@ -80,16 +80,17 @@ public class PointService {
 		byte[] initialPointUniverse = new byte[0];
 		
 		for (Point point : basePoint) {
-			initialPointUniverse = ArrayUtils.addAll(initialPointUniverse, ByteBuffer.allocate(2).putShort((short)point.getX()).array());
-			initialPointUniverse = ArrayUtils.addAll(initialPointUniverse, ByteBuffer.allocate(2).putShort((short)point.getY()).array());
+			initialPointUniverse = ArrayUtils.addAll(initialPointUniverse, encodeCoordinate(point.getX()));
+			initialPointUniverse = ArrayUtils.addAll(initialPointUniverse, encodeCoordinate(point.getY()));
 		}
 		return initialPointUniverse;
 	}
+
 	
 	private byte[] fillPointUniverse(byte[] initialPointCoordinates, int size) {
 		List<byte[]> tempCoordinatesList = new ArrayList<>();
 		
-		/* One point has two coordinates */
+		/* One point has two coordinates -> times 2 */
 		int remainingSize = size - (basePoint.size() * 2);	
 		
 		/* Create random coordinates */
@@ -97,7 +98,7 @@ public class PointService {
 		
 		/* Create byte[] for a coordinate */
 		randomCoordinates.forEach(p -> {
-			tempCoordinatesList.add(ByteBuffer.allocate(2).putShort(p).array());
+			tempCoordinatesList.add(encodeCoordinate(p));
 		});
 		
 		/* Add initial coordinates to point universe */
@@ -124,8 +125,24 @@ public class PointService {
 		}
 
 		return pointUnivese;
+	}	
+	
+	/**
+	 * 16 bit encoded integer value to byte[].
+	 * 
+	 * @param coordinate
+	 * @return
+	 */
+	private byte[] encodeCoordinate(int coordinate) {
+		return ByteBuffer.allocate(2).putShort((short)coordinate).array();
 	}
 	
+	/**
+	 * Create random coordinates for points in the point universe.
+	 * 
+	 * @param remainingSize
+	 * @return
+	 */
 	private List<Short> createRandomCoordinates(int remainingSize) {
 		List<Short> randomCoordinates = new ArrayList<>();
 		
