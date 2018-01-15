@@ -25,7 +25,7 @@ Develop and ship a Java program that computes, based on the point universe provi
    how to build it from source code and run it. <- I really have my doubt that they have such developers
    
    
- Acceptance Criteria:
+ Attention:
  -------------------- 
  
  - The first 3 points in the file are: (-715, 22165), (761, -23591), (-194, 6015)
