@@ -1,16 +1,15 @@
 ## NumberDistance Assignment
 
-###
+### Feedback
 
 After an very unprofessional feedback form the local software house which gave me this 
 task I made some changes to obscure their involvement to this.
 
 I wrote my own input file and made some changes to the given problem. I also changed the 
-package structure and names to wipe out them.
+package structure and names.
 
 By the way - one (especially professional developers) could and they should be able to easily follow the whole development process by following the commit 
-messages provided by GitHub. To say that this is not written by me is just unprofessional 
-and ignorant. 
+messages provided by GitHub. To say that this is not written by me is just unprofessional and ignorant. 
 
 I've overachieved the assignment tasks to show my abilities e.g. 
 - A call to the function (closest/furthest) shouldn't be more than 10 seconds (10000 ms - stated in the assignment). My average duration was 200 milliseconds for a call.
@@ -20,8 +19,9 @@ I've overachieved the assignment tasks to show my abilities e.g.
 - I have implemented the application flexible in regards to that I'm not bound to static input points - which means give me the closest/furthest points to any point inside and outside the point universe.
 - My result size is flexible and could also be parameterized from outside
 - ...
-- After the delivery of the assignment I added a writer for 16 bit encoded integer 
-coordinates for Points to create a point universe.
+- After the delivery of the assignment I added a writer for 16 bit encoded integer coordinates for Points to create a point universe.
+- **After all it was fun to work on the assignment. It was a good finger exercise in an area (PointUniverse) where I normally do not spend too much time.**
+
 
 ### Prerequisite
 
