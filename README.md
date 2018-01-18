@@ -72,7 +72,7 @@ messages provided by GitHub. To say that this is not written by me is just unpro
  3. Execute request ``findFurthestPointsTo`` or ``findClosestPointsTo`` 
  4. Check results
 
- **IMPORTANT**
+ **IMPORTANT:**
  1. ResultSet size could be changed in request parameter e.g ``resultSetSize=20``
  2. Algorithm could be changed with e.g. ``algoName=bruteforce`` (brutefoce is currently 
  the only available algorithm)
